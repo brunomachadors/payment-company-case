@@ -24,7 +24,7 @@
       "flag": "master",
       "type": "digital",
       "style": "Cristiano",
-      "main_category": "shopping"
+      "main_category": "compras"
     },
     {
       "name": "Cristiano Ronaldo",
@@ -37,7 +37,7 @@
       "flag": "american",
       "type": "digital",
       "style": "Batman",
-      "main_category": "utilities"
+      "main_category": "utilidades"
     },
     {
       "name": "Cristiano Ronaldo",
@@ -50,7 +50,7 @@
       "flag": "american",
       "type": "digital",
       "style": "Batman",
-      "main_category": "subscription"
+      "main_category": "subscrição"
     }
   ]
 }

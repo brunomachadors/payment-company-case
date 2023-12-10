@@ -1,0 +1,40 @@
+{
+  "my_cards": [
+    {
+      "name": "Cristiano Ronaldo",
+      "card_number": 4111399174040003,
+      "expiry_date": {
+        "month": 12,
+        "year": 2026
+      },
+      "cvv": 211,
+      "flag": "visa",
+      "type": "physical",
+      "style": null
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "card_number": 4111399174040004,
+      "expiry_date": {
+        "month": 11,
+        "year": 2028
+      },
+      "cvv": 211,
+      "flag": "master",
+      "type": "digital",
+      "style": "Cristiano"
+    },
+    {
+      "name": "Cristiano Ronaldo",
+      "card_number": 4111399174040005,
+      "expiry_date": {
+        "month": 7,
+        "year": 2029
+      },
+      "cvv": 211,
+      "flag": "american",
+      "type": "digital",
+      "style": "Batman"
+    }
+  ]
+}

@@ -1,4 +1,6 @@
 import PhysicleCard, { DigitalCards } from '../../components/Card';
+import Navbar from '../../components/Navbar';
+
 import {
   CardTitleView,
   DigitalCardTitle,
@@ -9,6 +11,7 @@ import { CardPageView } from './style';
 function CardsPage() {
   return (
     <CardPageView>
+      <Navbar></Navbar>
       <CardTitleView>Meus Cartões</CardTitleView>
       <PhysicalCardTitle>Cartão Físico</PhysicalCardTitle>
       <PhysicleCard></PhysicleCard>

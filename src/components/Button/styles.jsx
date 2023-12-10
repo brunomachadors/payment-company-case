@@ -8,5 +8,5 @@ export const CardButton = styled.button`
   border: none;
   flex-direction: row;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 `;

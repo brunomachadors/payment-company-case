@@ -4,6 +4,7 @@ export const CardTitleView = styled.p`
   font-weight: bold;
   font-size: 3vh;
   color: black;
+  font-family: 'KlarnaTextMedium', sans-serif;
 `;
 
 export const PhysicalCardTitle = styled.p`

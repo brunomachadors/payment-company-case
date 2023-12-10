@@ -3,6 +3,7 @@ import cards from '../../json/cards.json';
 import getCardProtectedNumber from '../../utils/cardNumber';
 import { CardButton } from '../Button/styles';
 import { ChevronRight } from '../Image/styles';
+import Category from '../Category';
 
 function PhysicalCard() {
   return (
@@ -34,6 +35,7 @@ export function DigitalCards() {
                 <CardName>{card.name}</CardName>
                 <CardNumber>{getCardProtectedNumber(card)}</CardNumber>
               </CardContainer>
+              <Category categoryName={card.main_category}></Category>
               <ChevronRight src="icons/chevronRight.svg"></ChevronRight>
             </CardButton>
           )

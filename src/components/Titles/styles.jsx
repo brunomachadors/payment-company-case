@@ -16,3 +16,9 @@ export const DigitalCardTitle = styled.p`
   font-size: 3vh;
   color: black;
 `;
+
+export const CardTitle = styled.p`
+  font-size: 3vh;
+  color: black;
+  text-align: center;
+`;

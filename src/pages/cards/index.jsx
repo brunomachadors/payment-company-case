@@ -1,4 +1,4 @@
-import PhysicleCard, { DigitalCards } from '../../components/Card';
+import PhysicleCard, { DigitalCards } from '../../components/MyCards';
 import Navbar from '../../components/Navbar';
 
 import {

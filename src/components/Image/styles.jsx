@@ -15,3 +15,7 @@ export const LockIcon = styled.img`
 export const ConfigIcon = styled.img`
   height: 6vh;
 `;
+
+export const CloseIcon = styled.img`
+  height: 4vh;
+`;

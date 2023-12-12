@@ -1,5 +1,4 @@
-import PhysicleCard, { DigitalCards } from '../../components/MyCards';
-import Navbar from '../../components/Navbar';
+import PhysicalCard, { DigitalCards } from '../../components/MyCards';
 
 import {
   CardTitleView,
@@ -11,11 +10,10 @@ import { CardPageContent, CardPageView } from './style';
 function CardsPage() {
   return (
     <CardPageView>
-      <Navbar></Navbar>
       <CardPageContent>
         <CardTitleView>Meus Cartões</CardTitleView>
         <PhysicalCardTitle>Cartão Físico</PhysicalCardTitle>
-        <PhysicleCard></PhysicleCard>
+        <PhysicalCard></PhysicalCard>
         <DigitalCardTitle>Cartão Digital</DigitalCardTitle>
         <DigitalCards></DigitalCards>
       </CardPageContent>

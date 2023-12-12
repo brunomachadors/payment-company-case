@@ -10,30 +10,19 @@ import {
 import { closeMenu } from '../../store/menu/menu';
 import { useNavigate } from 'react-router-dom';
 import { BarContainer, KlarnaName } from '../Navbar/style';
+import { PATHS } from '../../utils/paths';
 
 function Menu() {
   const dispatch = useDispatch();
-  const navitage = useNavigate();
+  const navigate = useNavigate();
 
   const handleClose = () => {
     dispatch(closeMenu());
   };
 
-  const handleHome = () => {
-    dispatch(closeMenu());
-    navitage('/');
-  };
-  const handleCreateCard = () => {
-    dispatch(closeMenu());
-    navitage('/createcard');
-  };
-  const handleMyCards = () => {
-    dispatch(closeMenu());
-    navitage('/mycards');
-  };
-  const handleAboutUs = () => {
-    dispatch(closeMenu());
-    navitage('/aboutus');
+  const handleNavigation = (path) => {
+    handleClose();
+    navigate(path);
   };
 
   return (
@@ -41,7 +30,7 @@ function Menu() {
       <MenuHeader>
         <BarContainer>
           <MenuIcon src="icons/menuIcon.svg"></MenuIcon>
-          <KlarnaName onClick={handleHome}>Klarna.</KlarnaName>
+          <KlarnaName onClick={() => handleNavigation('/')}>Klarna.</KlarnaName>
         </BarContainer>
         <CloseButton onClick={handleClose}>
           <CloseIcon src="icons/close.svg"></CloseIcon>
@@ -49,10 +38,18 @@ function Menu() {
       </MenuHeader>
 
       <MenuButtonsContainer>
-        <MenuButton onClick={handleHome}>HOME</MenuButton>
-        <MenuButton onClick={handleCreateCard}>CRIAR CARTÃO</MenuButton>
-        <MenuButton onClick={handleMyCards}>MEUS CARTÕES</MenuButton>
-        <MenuButton onClick={handleAboutUs}>SOBRE NÓS</MenuButton>
+        <MenuButton onClick={() => handleNavigation(PATHS.home)}>
+          HOME
+        </MenuButton>
+        <MenuButton onClick={() => handleNavigation(PATHS.createCards)}>
+          CRIAR CARTÃO
+        </MenuButton>
+        <MenuButton onClick={() => handleNavigation(PATHS.myCards)}>
+          MEUS CARTÕES
+        </MenuButton>
+        <MenuButton onClick={() => handleNavigation(PATHS.aboutUs)}>
+          SOBRE NÓS
+        </MenuButton>
       </MenuButtonsContainer>
     </MenuView>
   );

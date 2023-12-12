@@ -4,7 +4,7 @@ export const MenuView = styled.div`
   color: black;
   background-color: white;
   position: absolute;
-  z-index: 9999;
+  z-index: 3;
   width: 100vw;
   height: 100vh;
   left: 0;
@@ -18,7 +18,7 @@ export const CloseButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10000;
+  z-index: 4;
 `;
 
 export const MenuButtonsContainer = styled.div`

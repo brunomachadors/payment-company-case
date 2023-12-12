@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import CardCarousel from "../../components/CardCarousel";
-const cardTypes = ["classic", "premium"];
+const cardTypes = ["classic", "prestige"];
 
 export default function CardDesignSelection() {
   const { cardType } = useParams();

@@ -1,11 +1,11 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import { persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
-import cardReducer from './card/card';
+import cardReducer from "./card/card";
 
 const persistConfig = {
-  key: 'root',
+  key: "root",
   storage,
 };
 

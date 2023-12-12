@@ -6,17 +6,19 @@ import {
   DigitalCardTitle,
   PhysicalCardTitle,
 } from '../../components/Titles/styles';
-import { CardPageView } from './style';
+import { CardPageContent, CardPageView } from './style';
 
 function CardsPage() {
   return (
     <CardPageView>
       <Navbar></Navbar>
-      <CardTitleView>Meus Cartões</CardTitleView>
-      <PhysicalCardTitle>Cartão Físico</PhysicalCardTitle>
-      <PhysicleCard></PhysicleCard>
-      <DigitalCardTitle>Cartão Digital</DigitalCardTitle>
-      <DigitalCards></DigitalCards>
+      <CardPageContent>
+        <CardTitleView>Meus Cartões</CardTitleView>
+        <PhysicalCardTitle>Cartão Físico</PhysicalCardTitle>
+        <PhysicleCard></PhysicleCard>
+        <DigitalCardTitle>Cartão Digital</DigitalCardTitle>
+        <DigitalCards></DigitalCards>
+      </CardPageContent>
     </CardPageView>
   );
 }

@@ -1,3 +1,7 @@
 export default function CardCarousel({ cardType }) {
-  return <></>;
+  return (
+    <>
+      <p>{cardType}</p>
+    </>
+  );
 }

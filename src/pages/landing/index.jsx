@@ -1,12 +1,7 @@
-import Navbar from '../../components/Navbar';
 import { LandingView } from './style';
 
 function LandingPage() {
-  return (
-    <LandingView>
-      <Navbar></Navbar>
-    </LandingView>
-  );
+  return <LandingView />;
 }
 
 export default LandingPage;

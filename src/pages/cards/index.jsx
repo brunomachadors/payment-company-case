@@ -1,22 +1,22 @@
-import PhysicleCard, { DigitalCards } from '../../components/MyCards';
-import Navbar from '../../components/Navbar';
+import PhysicalCard, { DigitalCards } from '../../components/MyCards';
 
 import {
   CardTitleView,
   DigitalCardTitle,
   PhysicalCardTitle,
 } from '../../components/Titles/styles';
-import { CardPageView } from './style';
+import { CardPageContent, CardPageView } from './style';
 
 function CardsPage() {
   return (
     <CardPageView>
-      <Navbar></Navbar>
-      <CardTitleView>Meus Cartões</CardTitleView>
-      <PhysicalCardTitle>Cartão Físico</PhysicalCardTitle>
-      <PhysicleCard></PhysicleCard>
-      <DigitalCardTitle>Cartão Digital</DigitalCardTitle>
-      <DigitalCards></DigitalCards>
+      <CardPageContent>
+        <CardTitleView>Meus Cartões</CardTitleView>
+        <PhysicalCardTitle>Cartão Físico</PhysicalCardTitle>
+        <PhysicalCard></PhysicalCard>
+        <DigitalCardTitle>Cartão Digital</DigitalCardTitle>
+        <DigitalCards></DigitalCards>
+      </CardPageContent>
     </CardPageView>
   );
 }

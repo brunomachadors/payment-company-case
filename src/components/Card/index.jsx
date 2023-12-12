@@ -1,6 +1,5 @@
 import { useSelector } from 'react-redux';
 import { formatCardNumber } from '../../helpers/formatCardNumbers';
-import Navbar from '../Navbar';
 import { CardTitle } from '../Titles/styles';
 import {
   ButtonsContainer,
@@ -35,7 +34,6 @@ function Card() {
 
   return (
     <CardView>
-      <Navbar></Navbar>
       <CardTitle>Cartão Digital</CardTitle>
       <DisplayCard card={card}></DisplayCard>
       <CardInfo card={card}></CardInfo>

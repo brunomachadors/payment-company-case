@@ -12,7 +12,7 @@ export default function CardTypeSelection() {
         Classic
       </PrimaryButton>
       <PrimaryButton onClick={() => navigate(PATHS.createCards.prestige)}>
-        Premium
+        Prestige
       </PrimaryButton>
     </>
   );

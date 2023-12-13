@@ -12,8 +12,8 @@ export const CarouselContainer = styled.figure`
   overflow: hidden;
   @media (max-width: 425px) {
     width: 320px;
+    height: 500px;
   }
-  border: 1px solid black;
 `;
 
 export const CarouselInner = styled.div`

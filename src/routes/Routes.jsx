@@ -16,10 +16,10 @@ function AllRoutes() {
         <Route path={PATHS.home} element={<LandingPage />} />
         <Route path={PATHS.myCards} element={<CardsPage />} />
         <Route path={PATHS.card} element={<CardPage />} />
-        <Route path={PATHS.createCards} element={<CreateCardPage />}>
+        <Route path={PATHS.createCards.index} element={<CreateCardPage />}>
           <Route index element={<CardTypeSelection />} />
           <Route
-            path={`${PATHS.createCards}/:cardType`}
+            path={`${PATHS.createCards.index}/:cardType`}
             element={<CardDesignSelection />}
           />
         </Route>

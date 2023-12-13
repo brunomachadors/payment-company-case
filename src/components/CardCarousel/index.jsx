@@ -9,7 +9,8 @@ import {
 import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";
 
 export default function CardCarousel({ cardType }) {
-  const [currentItem, setCurrentItem] = useState(1);
+  const [currentItem, setCurrentItem] = useState(0);
+  //number 2 should be replaced by the length of items array when we have one. Same goes below in the component for conditionally rendering right arrow
   const handleChangeSlide = (direction) => {
     if (direction === "right") {
       currentItem === 2
@@ -23,7 +24,10 @@ export default function CardCarousel({ cardType }) {
   };
   return (
     <CarouselContainer>
-      <CarouselNavigation onClick={() => handleChangeSlide("left")}>
+      <CarouselNavigation
+        onClick={() => handleChangeSlide("left")}
+        direction="left"
+      >
         {currentItem !== 0 && <FaLongArrowAltLeft />}
       </CarouselNavigation>
 
@@ -39,7 +43,10 @@ export default function CardCarousel({ cardType }) {
         </CarouselItem>
       </CarouselInner>
 
-      <CarouselNavigation onClick={() => handleChangeSlide("right")}>
+      <CarouselNavigation
+        onClick={() => handleChangeSlide("right")}
+        direction="right"
+      >
         {currentItem !== 2 && <FaLongArrowAltRight />}
       </CarouselNavigation>
     </CarouselContainer>

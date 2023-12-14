@@ -19,3 +19,7 @@ export const ConfigIcon = styled.img`
 export const CloseIcon = styled.img`
   height: 4vh;
 `;
+
+export const LinkedinIcon = styled.img`
+  height: 3vh;
+`;

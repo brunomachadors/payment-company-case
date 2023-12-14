@@ -1,12 +1,13 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import CardsPage from "../pages/cards";
-import CardPage from "../pages/card";
-import CardTypeSelection from "../pages/CardTypeSelection";
-import LandingPage from "../pages/landing";
-import { PATHS } from "../utils/paths";
-import Navbar from "../components/Navbar";
-import CardDesignSelection from "../pages/CardDesignSelection";
-import CreateCardPage from "../pages/CreateCard";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CardsPage from '../pages/cards';
+import CardPage from '../pages/card';
+import CardTypeSelection from '../pages/CardTypeSelection';
+import LandingPage from '../pages/landing';
+import { PATHS } from '../utils/paths';
+import Navbar from '../components/Navbar';
+import CardDesignSelection from '../pages/CardDesignSelection';
+import CreateCardPage from '../pages/CreateCard';
+import AboutUs from '../pages/AboutUs';
 
 function AllRoutes() {
   return (
@@ -23,6 +24,7 @@ function AllRoutes() {
             element={<CardDesignSelection />}
           />
         </Route>
+        <Route path={PATHS.aboutUs} element={<AboutUs />}></Route>
       </Routes>
     </BrowserRouter>
   );

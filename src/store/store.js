@@ -1,16 +1,15 @@
-import { configureStore, combineReducers } from '@reduxjs/toolkit';
-import { persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import { configureStore, combineReducers } from "@reduxjs/toolkit";
+import { persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
-// Importação dos reducers
-import cardReducer from './card/card';
-import menuReducer from './menu/menu';
+import cardReducer from "./card/card";
+import menuReducer from "./menu/menu";
 
 // Configuração do persist
 const persistConfig = {
-  key: 'root',
+  key: "root",
   storage,
-  whitelist: ['selectedCard'],
+  whitelist: ["selectedCard"],
 };
 
 // Combinação de reducers

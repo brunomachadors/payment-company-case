@@ -55,7 +55,8 @@ export const BackFace = styled(Face)`
 
 export const CardDisplayImage = styled.img`
   display: flex;
-  height: 100%;
+  height: 90%;
+  margin-bottom: 0;
 `;
 
 export const CardName = styled.div`

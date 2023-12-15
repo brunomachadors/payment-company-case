@@ -79,6 +79,7 @@ export const CardView = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   width: 100vw;
+  margin-top: 4vh;
   gap: 3vh;
 `;
 

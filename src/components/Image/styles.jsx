@@ -23,3 +23,15 @@ export const CloseIcon = styled.img`
 export const LinkedinIcon = styled.img`
   height: 3vh;
 `;
+
+export const ContentImage = styled.img`
+  width: 100%;
+`;
+
+export const BagsIcon = styled.img`
+  height: 7vh;
+`;
+
+export const KCash = styled.img`
+  height: 7vw;
+`;

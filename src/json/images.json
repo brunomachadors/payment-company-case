@@ -1,0 +1,11 @@
+{
+  "content": {
+    "cardKiss": "images/beijoCartao.svg",
+    "cardPink": "images/cardPink.svg",
+    "twoCards": "images/twoCards.svg",
+    "kCash": "images/kCash.svg"
+  },
+  "icons": {
+    "bags": "icons/bags.svg"
+  }
+}

@@ -4,6 +4,8 @@ export const CardTitleView = styled.p`
   font-weight: bold;
   font-size: 3vh;
   color: black;
+  width: 100%;
+  text-align: center;
   font-family: 'KlarnaTextMedium', sans-serif;
 `;
 

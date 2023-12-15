@@ -2,11 +2,10 @@ import styled from 'styled-components';
 
 export const MenuView = styled.div`
   color: black;
-  background-color: white;
+  background-color: transparent;
   position: absolute;
   z-index: 3;
-  width: 100vw;
-  height: 100vh;
+  background-color: transparent;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -14,7 +13,7 @@ export const MenuView = styled.div`
 
 export const CloseButton = styled.button`
   border: none;
-  background-color: white;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,8 +22,9 @@ export const CloseButton = styled.button`
 
 export const MenuButtonsContainer = styled.div`
   width: 100vw;
+  height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   border-top: 1px solid black;
 `;
@@ -45,3 +45,17 @@ export const MenuHeader = styled.div`
 `;
 
 export const MenuTitle = styled.div``;
+
+export const KlarnaName = styled.button`
+  border: none;
+  background: none;
+  font-family: 'KlarnaTextMedium', sans-serif;
+  font-size: 3vh;
+`;
+
+export const BarContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-start;
+`;

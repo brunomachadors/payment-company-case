@@ -1,7 +1,7 @@
-import { useParams } from "react-router-dom";
-import CardCarousel from "../../components/CardCarousel";
-import { PrimaryButton } from "../../GlobalStyles";
-const cardTypes = ["classic", "prestige"];
+import { useParams } from 'react-router-dom';
+import CardCarousel from '../../components/CardCarousel';
+import { PrimaryButton } from '../../GlobalStyles';
+const cardTypes = ['classic', 'prestige'];
 
 export default function CardDesignSelection() {
   const { cardType } = useParams();

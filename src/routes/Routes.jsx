@@ -4,15 +4,15 @@ import CardPage from '../pages/card';
 import CardTypeSelection from '../pages/CardTypeSelection';
 import LandingPage from '../pages/landing';
 import { PATHS } from '../utils/paths';
-import Navbar from '../components/Navbar';
 import CardDesignSelection from '../pages/CardDesignSelection';
 import CreateCardPage from '../pages/CreateCard';
 import AboutUs from '../pages/AboutUs';
+import Menu from '../components/Menu';
 
 function AllRoutes() {
   return (
     <BrowserRouter>
-      <Navbar />
+      <Menu></Menu>
       <Routes>
         <Route path={PATHS.home} element={<LandingPage />} />
         <Route path={PATHS.myCards} element={<CardsPage />} />

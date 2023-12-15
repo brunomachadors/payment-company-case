@@ -1,7 +1,12 @@
+import Content from '../../components/Content';
 import { LandingView } from './style';
 
 function LandingPage() {
-  return <LandingView />;
+  return (
+    <LandingView>
+      <Content></Content>
+    </LandingView>
+  );
 }
 
 export default LandingPage;

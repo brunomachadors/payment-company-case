@@ -7,6 +7,7 @@ export const AboutUsView = styled.div`
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  margin-top: 5vh;
   gap: 3vh;
 `;
 

@@ -1,18 +1,24 @@
-import { configureStore, combineReducers } from "@reduxjs/toolkit";
-import { persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import {
+  persistReducer,
+  FLUSH,
+  REHYDRATE,
+  PAUSE,
+  PERSIST,
+  PURGE,
+  REGISTER,
+} from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
-import cardReducer from "./card/card";
-import menuReducer from "./menu/menu";
+import cardReducer from './card/card';
+import menuReducer from './menu/menu';
 
-// Configuração do persist
 const persistConfig = {
-  key: "root",
+  key: 'root',
   storage,
-  whitelist: ["selectedCard"],
+  whitelist: ['selectedCard'],
 };
 
-// Combinação de reducers
 const rootReducer = combineReducers({
   selectedCard: cardReducer,
   menu: menuReducer,
@@ -22,4 +28,10 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: {
+        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+      },
+    }),
 });

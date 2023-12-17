@@ -1,7 +1,8 @@
 {
   "my_cards": [
     {
-      "name": "Cristiano Ronaldo",
+      "owner": "Ana Clara Alves",
+      "name": "Ana Clara Alves",
       "card_number": 4111399174040001,
       "expiry_date": {
         "month": 12,
@@ -11,10 +12,11 @@
       "flag": "visa",
       "type": "physical",
       "style": null,
-      "main_category": null
+      "categories": ["Subscrições", "Entretenimento", "Transporte"]
     },
     {
-      "name": "Cristiano Ronaldo",
+      "owner": "Ana Clara Alves",
+      "name": "Roupas",
       "card_number": 4111399174040002,
       "expiry_date": {
         "month": 11,
@@ -24,10 +26,11 @@
       "flag": "master",
       "type": "digital",
       "style": "Cristiano",
-      "main_category": "compras"
+      "categories": ["Subscrições", "Entretenimento", "Transporte"]
     },
     {
-      "name": "Cristiano Ronaldo",
+      "owner": "Ana Clara Alves",
+      "name": "Assinaturas",
       "card_number": 4111399174040003,
       "expiry_date": {
         "month": 7,
@@ -37,20 +40,7 @@
       "flag": "american",
       "type": "digital",
       "style": "Batman",
-      "main_category": "utilidades"
-    },
-    {
-      "name": "Cristiano Ronaldo",
-      "card_number": 4111399174040004,
-      "expiry_date": {
-        "month": 7,
-        "year": 2029
-      },
-      "cvv": 211,
-      "flag": "american",
-      "type": "digital",
-      "style": "Batman",
-      "main_category": "subscrição"
+      "categories": ["Subscrições", "Entretenimento", "Transporte"]
     }
   ]
 }

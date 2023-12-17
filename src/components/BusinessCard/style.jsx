@@ -74,6 +74,7 @@ export const Description = styled.div`
   background-color: black;
   border: 1px solid white;
   max-width: 70%;
+  padding: 5px;
 `;
 
 export const LinkedinButton = styled.button`

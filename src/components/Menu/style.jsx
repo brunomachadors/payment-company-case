@@ -13,7 +13,7 @@ export const MenuView = styled.div`
 
 export const CloseButton = styled.button`
   border: none;
-  background-color: transparent;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,15 +26,25 @@ export const MenuButtonsContainer = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  border-top: 1px solid black;
+  background-color: white;
 `;
 
 export const MenuButton = styled.button`
-  height: 15vw;
-  text-align: left;
   background-color: white;
   border: none;
-  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15vw;
+`;
+
+export const MenuButtonText = styled.div`
+  text-align: left;
+  font-size: 5vw;
+  width: 80%;
+  height: 12vw;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: 'KlarnaTextRegular', sans-serif;
 `;
 
 export const MenuHeader = styled.div`

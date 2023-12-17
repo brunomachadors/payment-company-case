@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const ChevronRight = styled.img`
-  height: 6vh;
-`;
-
 export const MenuIcon = styled.img`
   height: 5vh;
 `;
@@ -34,4 +30,9 @@ export const BagsIcon = styled.img`
 
 export const KCash = styled.img`
   height: 7vw;
+`;
+
+export const MyCardDisplay = styled.img`
+  width: 90%;
+  border-radius: 10px;
 `;

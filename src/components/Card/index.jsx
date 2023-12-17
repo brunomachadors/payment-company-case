@@ -10,6 +10,7 @@ import {
   CardDisplayImage,
   CardExpireContainer,
   CardExpireDate,
+  CardExpireDateContaier,
   CardExpireDateValue,
   CardExpireInfoContainer,
   CardExpireInfoTitle,
@@ -25,17 +26,32 @@ import {
   CardNumberInfoTitle,
   CardNumberInfoValue,
   CardView,
+  Tags,
 } from './style';
 import PropTypes from 'prop-types';
-import { ConfigIcon, LockIcon } from '../Image/styles';
+import { ConfigIcon, LockIcon, MyCardDisplay } from '../Image/styles';
+import { CategoryContainer } from '../Category/style';
+import Category from '../Category';
+import { GoChevronLeft } from 'react-icons/go';
+import { ReturnButton } from '../Button/styles';
+import { useNavigate } from 'react-router-dom';
+import { PATHS } from '../../utils/paths';
 
 function Card() {
   const card = useSelector((state) => state.selectedCard.selectedCard);
+  const navigate = useNavigate();
+  const handleReturn = () => {
+    navigate(PATHS.myCards);
+  };
 
   return (
     <CardView>
-      <CardTitle>Cartão Digital</CardTitle>
-      <DisplayCard card={card}></DisplayCard>
+      <ReturnButton onClick={handleReturn}>
+        <GoChevronLeft size={50}></GoChevronLeft>
+        <CardTitle>{card.name}</CardTitle>
+      </ReturnButton>
+
+      <MyCardDisplay src="images/cards/ednaCard.svg"></MyCardDisplay>
       <CardInfo card={card}></CardInfo>
       <CardButtons></CardButtons>
     </CardView>
@@ -60,7 +76,6 @@ function DisplayCard({ card }) {
         </CardExpireDateValue>
       </CardExpireContainer>
       <CardNameDisplay>{card.name}</CardNameDisplay>
-
       <CardDisplayImage src="images/cr7.png"></CardDisplayImage>
     </CardDisplay>
   );
@@ -68,19 +83,26 @@ function DisplayCard({ card }) {
 
 DisplayCard.propTypes = {
   card: PropTypes.shape({
-    card_number: PropTypes.string.isRequired,
+    card_number: PropTypes.number.isRequired,
     expiry_date: PropTypes.shape({
       month: PropTypes.number.isRequired,
       year: PropTypes.number.isRequired,
     }).isRequired,
-    cvv: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    cvv: PropTypes.number.isRequired,
+    name: PropTypes.string,
+    owner: PropTypes.string.isRequired,
+    categories: PropTypes.array,
   }).isRequired,
 };
 
 function CardInfo({ card }) {
   return (
     <CardInfoContainer>
+      <CardNameInfoContainer>
+        <CardNameInfoTitle>Nome</CardNameInfoTitle>
+        <CardNameInfoValue>{card.owner}</CardNameInfoValue>
+      </CardNameInfoContainer>
+
       <CardNumberInfoContainer>
         <CardNumberInfoTitle> Número</CardNumberInfoTitle>
         <CardNumberInfoValue>
@@ -88,35 +110,40 @@ function CardInfo({ card }) {
         </CardNumberInfoValue>
       </CardNumberInfoContainer>
 
-      <CardNameInfoContainer>
-        <CardNameInfoTitle>Nome</CardNameInfoTitle>
-        <CardNameInfoValue>{card.name}</CardNameInfoValue>
-      </CardNameInfoContainer>
-
       <CardExpireInfoContainer>
-        <CardExpireInfoTitle>Validade</CardExpireInfoTitle>
-        <CardExpireInfoValue>
-          {card.expiry_date.month + '/' + card.expiry_date.year}
-        </CardExpireInfoValue>
+        <CardExpireDateContaier>
+          <CardExpireInfoTitle>Validade</CardExpireInfoTitle>
+          <CardExpireInfoValue>
+            {card.expiry_date.month + '/' + card.expiry_date.year}
+          </CardExpireInfoValue>
+        </CardExpireDateContaier>
+        <CardCVVInfoContainer>
+          <CardCVVInfoTitle>CVV</CardCVVInfoTitle>
+          <CardCVVInfoValue>{card.cvv}</CardCVVInfoValue>
+        </CardCVVInfoContainer>
       </CardExpireInfoContainer>
 
-      <CardCVVInfoContainer>
-        <CardCVVInfoTitle>CVV</CardCVVInfoTitle>
-        <CardCVVInfoValue>{card.cvv}</CardCVVInfoValue>
-      </CardCVVInfoContainer>
+      <Tags>Tags</Tags>
+      <CategoryContainer>
+        {card.categories.map((category) => (
+          <Category key={category} categoryName={category} />
+        ))}
+      </CategoryContainer>
     </CardInfoContainer>
   );
 }
 
 CardInfo.propTypes = {
   card: PropTypes.shape({
-    card_number: PropTypes.string.isRequired,
+    card_number: PropTypes.number.isRequired,
     expiry_date: PropTypes.shape({
       month: PropTypes.number.isRequired,
       year: PropTypes.number.isRequired,
     }).isRequired,
-    cvv: PropTypes.string.isRequired,
+    cvv: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
+    owner: PropTypes.string.isRequired,
+    categories: PropTypes.array,
   }).isRequired,
 };
 

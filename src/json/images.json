@@ -6,6 +6,7 @@
     "kCash": "images/kCash.svg"
   },
   "icons": {
-    "bags": "icons/bags.svg"
+    "bags": "icons/bags.svg",
+    "menu": "icons/menuIcon.svg"
   }
 }

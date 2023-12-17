@@ -40,7 +40,8 @@ function Content() {
       <ContentBlock>
         <ContentTitle>Nosso cartão agora em Portugal</ContentTitle>
         <ContentDescription>
-          O cartão de crédito premium para você viver todas as suas escolhas.
+          Agora você pode desfrutar da conveniência do serviço Klarna
+          diretamente em suas lojas físicas e online favoritas.
         </ContentDescription>
         <PinkButton onClick={handleRequestCard}>Solicitar cartão</PinkButton>
       </ContentBlock>

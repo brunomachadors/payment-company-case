@@ -79,8 +79,10 @@ export const CardView = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   width: 100vw;
-  margin-top: 4vh;
-  gap: 3vh;
+  margin-top: 5vh;
+  gap: 2vh;
+  padding: 24px;
+  font-family: 'KlarnaTextMedium', sans-serif;
 `;
 
 export const CardInfoContainer = styled.div`
@@ -88,62 +90,106 @@ export const CardInfoContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  width: 95vw;
-  gap: 2vh;
+  width: 100%;
+  padding: 24px;
+  gap: 3vh;
 `;
 
 export const CardNumberInfoContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-
-  width: 85%;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
 `;
 export const CardNumberInfoTitle = styled.div`
-  font-family: 'KlarnaTextMedium', sans-serif;
+  font-family: 'KlarnaTextRegular', sans-serif;
+  font-size: 18px;
 `;
 
-export const CardNumberInfoValue = styled.div``;
+export const CardNumberInfoValue = styled.div`
+  font-family: 'KlarnaTextMedium', sans-serif;
+  font-size: 23px;
+`;
 
 export const CardNameInfoContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  width: 85%;
-`;
-export const CardNameInfoTitle = styled.div`
-  font-family: 'KlarnaTextMedium', sans-serif;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
 `;
 
-export const CardNameInfoValue = styled.div``;
+export const CardNameInfoTitle = styled.div`
+  font-family: 'KlarnaTextRegular', sans-serif;
+  font-size: 18px;
+`;
+
+export const Tags = styled.div`
+  font-family: 'KlarnaTextRegular', sans-serif;
+  font-size: 15px;
+  width: 100%;
+`;
+
+export const CardNameInfoValue = styled.div`
+  font-family: 'KlarnaTextMedium', sans-serif;
+  font-size: 23px;
+`;
 
 export const CardExpireInfoContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  width: 85%;
-`;
-export const CardExpireInfoTitle = styled.div`
-  font-family: 'KlarnaTextMedium', sans-serif;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
 `;
 
-export const CardExpireInfoValue = styled.div``;
+export const CardExpireDateContaier = styled.div`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+`;
+
+export const CardExpireInfoTitle = styled.div`
+  font-family: 'KlarnaTextRegular', sans-serif;
+  font-size: 18px;
+`;
+
+export const CardExpireInfoValue = styled.div`
+  font-family: 'KlarnaTextMedium', sans-serif;
+  font-size: 23px;
+`;
 
 export const CardCVVInfoContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  width: 85%;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
 `;
 export const CardCVVInfoTitle = styled.div`
-  font-family: 'KlarnaTextMedium', sans-serif;
+  font-family: 'KlarnaTextRegular', sans-serif;
+  font-size: 18px;
 `;
 
-export const CardCVVInfoValue = styled.div``;
+export const CardCVVInfoValue = styled.div`
+  font-family: 'KlarnaTextMedium', sans-serif;
+  font-size: 23px;
+`;
 
 export const ButtonsContainer = styled.div`
   display: flex;
-  width: 80%;
+  width: 100%;
+  font-family: 'KlarnaTextMedium', sans-serif;
   align-items: center;
   justify-content: space-around;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
 `;

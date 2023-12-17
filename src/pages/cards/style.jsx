@@ -14,5 +14,7 @@ export const CardPageContent = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  width: 92vw;
+  width: 100vw;
+  padding: 24px;
+  gap: 10px;
 `;

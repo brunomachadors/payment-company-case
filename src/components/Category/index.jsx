@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 function Category({ categoryName }) {
   const [category] = useState(categoryName);
+
   return <CategoryType>{category}</CategoryType>;
 }
 

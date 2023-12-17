@@ -1,21 +1,13 @@
-:root {
-  font-family: 'KlarnaTextMediumRegular', sans-serif;
-  color: black;
-  background-color: white;
-  width: 100vw;
-  height: 100vh;
-}
-
 @font-face {
   font-family: 'KlarnaTextMedium';
-  src: url('fonts/KlarnaTextMono-Medium.ttf') format('truetype');
+  src: url('/fonts/KlarnaTextMono-Medium.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'KlarnaTextMediumRegular';
-  src: url('fonts/KlarnaTextMono-Regular.ttf') format('truetype');
+  src: url('/fonts/KlarnaTextMono-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }

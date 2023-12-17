@@ -50,6 +50,7 @@ export const ContentDescription = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-family: 'KlarnaTextRegular', sans-serif;
 `;
 
 export const ContentDescriptionComplement = styled.div`
@@ -61,6 +62,7 @@ export const ContentDescriptionComplement = styled.div`
   justify-content: flex-start;
   text-align: left;
   max-width: 70%;
+  font-family: 'KlarnaTextRegular', sans-serif;
 `;
 
 export const ContentFooter = styled.div`
@@ -74,6 +76,7 @@ export const ContentFooter = styled.div`
   gap: 24px;
   flex-direction: column;
   padding: 25px;
+  font-family: 'KlarnaTextRegular', sans-serif;
 `;
 
 export const KlarnaNameWhite = styled.button`

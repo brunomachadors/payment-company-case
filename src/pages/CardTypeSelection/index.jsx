@@ -1,20 +1,46 @@
-import { PrimaryButton } from '../../GlobalStyles';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { PATHS } from '../../utils/paths';
-import { CartTypeView } from './style';
+import {
+  CardPlan,
+  CardPlansContainer,
+  CardTypeDescription,
+  CartTypeView,
+} from './style';
+import { RequestCardTitle } from '../../components/Titles/styles';
+import { TabButton, TabButtonContainer } from '../../components/Button/styles';
 
 export default function CardTypeSelection() {
   const navigate = useNavigate();
 
+  const selectedPlan = location.pathname.split('/').pop();
+  const isPlanSelected = (plan) => selectedPlan === plan;
+
   return (
     <CartTypeView>
-      <p>Choose type of card</p>
-      <PrimaryButton onClick={() => navigate(PATHS.createCards.classic)}>
-        Classic
-      </PrimaryButton>
-      <PrimaryButton onClick={() => navigate(PATHS.createCards.prestige)}>
-        Prestige
-      </PrimaryButton>
+      <RequestCardTitle>Solicitar cartão</RequestCardTitle>
+      <CardTypeDescription>
+        Comece a desfrutar de uma nova forma de pagar suas contas na Klarna.
+      </CardTypeDescription>
+      <CardPlan>Escolha o plano adequado às suas necessidades</CardPlan>
+      <CardPlansContainer>
+        <TabButtonContainer>
+          <TabButton
+            selected={
+              isPlanSelected('chooseprestige') || isPlanSelected('createcards')
+            }
+            onClick={() => navigate(PATHS.createCards.choosePrestige)}
+          >
+            Prestige
+          </TabButton>
+          <TabButton
+            selected={isPlanSelected('chooseclassic')}
+            onClick={() => navigate(PATHS.createCards.chooseClassic)}
+          >
+            Classic
+          </TabButton>
+        </TabButtonContainer>
+        <Outlet />
+      </CardPlansContainer>
     </CartTypeView>
   );
 }

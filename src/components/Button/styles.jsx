@@ -28,3 +28,16 @@ export const PinkButton = styled.button`
   color: '#16120F';
   font-size: 17px;
 `;
+
+export const TabButton = styled.button`
+  color: ${({ selected }) => (selected ? 'black' : 'white')};
+  width: 100%;
+  border: none;
+  background-color: ${({ selected }) => (selected ? 'transparent' : 'gray')};
+  font-family: 'KlarnaTextMedium', sans-serif;
+  font-size: 3vh;
+`;
+
+export const TabButtonContainer = styled.div`
+  display: flex;
+`;

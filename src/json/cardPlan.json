@@ -1,0 +1,60 @@
+{
+  "classic": {
+    "name": "Classic",
+    "cards": [
+      {
+        "name": "Classic",
+        "imageSource": "https://res.cloudinary.com/dtglidvcw/image/upload/v1702882256/cards/classic.svg"
+      }
+    ],
+    "benefits": [
+      "Obtenha um cartão gratuito (aplica-se taxas de entrega)",
+      "Compre nas suas lojas favoritas com o cartão de crédito Visa Klarna",
+      "Flexibilidade de parcelar em até 3x sem juros",
+      "Tenha um cartão digital e adicione Apple Pay ou Google Pay para começar a pagar em minutos"
+    ]
+  },
+  "prestige": {
+    "name": "Prestige",
+    "cards": [
+      {
+        "name": "Edna",
+        "imageSource": "https://res.cloudinary.com/dtglidvcw/image/upload/v1702882808/cards/edna.svg"
+      },
+      {
+        "name": "Cruela",
+        "imageSource": "https://res.cloudinary.com/dtglidvcw/image/upload/v1702882268/cards/cruela.svg"
+      },
+      {
+        "name": "Bowie",
+        "imageSource": "https://res.cloudinary.com/dtglidvcw/image/upload/v1702882258/cards/bowie.svg"
+      },
+      {
+        "name": "Audrey",
+        "imageSource": "https://res.cloudinary.com/dtglidvcw/image/upload/v1702882255/cards/audrey.svg"
+      },
+      {
+        "name": "James Bond",
+        "imageSource": "https://res.cloudinary.com/dtglidvcw/image/upload/v1702882255/cards/Jamesbond.svg"
+      },
+      {
+        "name": "Gaga",
+        "imageSource": "https://res.cloudinary.com/dtglidvcw/image/upload/v1702882258/cards/gaga.svg"
+      },
+      {
+        "name": "Paul",
+        "imageSource": "https://res.cloudinary.com/dtglidvcw/image/upload/v1702882257/cards/paul.svg"
+      },
+      {
+        "name": "Sia",
+        "imageSource": "https://res.cloudinary.com/dtglidvcw/image/upload/v1702882255/cards/sia.svg"
+      }
+    ],
+    "benefits": [
+      "5% de cashback em lojas parceiras da Klarna",
+      "Compre nas suas lojas favoritas com o cartão de crédito Visa Klarna",
+      "Personalize o cartão com o seu estilo",
+      "Mais segurança e controle de suas finanças ao criar diferentes cartões virtuais"
+    ]
+  }
+}

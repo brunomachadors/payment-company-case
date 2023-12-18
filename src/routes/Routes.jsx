@@ -5,9 +5,9 @@ import CardTypeSelection from '../pages/CardTypeSelection';
 import LandingPage from '../pages/landing';
 import { PATHS } from '../utils/paths';
 import CardDesignSelection from '../pages/CardDesignSelection';
-import CreateCardPage from '../pages/CreateCard';
 import AboutUs from '../pages/AboutUs';
 import Menu from '../components/Menu';
+import CardPlan from '../components/CardPlan';
 
 function AllRoutes() {
   return (
@@ -17,13 +17,21 @@ function AllRoutes() {
         <Route path={PATHS.home} element={<LandingPage />} />
         <Route path={PATHS.myCards} element={<CardsPage />} />
         <Route path={PATHS.card} element={<CardPage />} />
-        <Route path={PATHS.createCards.index} element={<CreateCardPage />}>
-          <Route index element={<CardTypeSelection />} />
+        <Route path={PATHS.createCards.index} element={<CardTypeSelection />}>
+          <Route index element={<CardPlan plan="prestige" />} />
           <Route
-            path={`${PATHS.createCards.index}/:cardType`}
-            element={<CardDesignSelection />}
+            path={PATHS.createCards.choosePrestige}
+            element={<CardPlan plan="prestige" />}
+          />
+          <Route
+            path={PATHS.createCards.chooseClassic}
+            element={<CardPlan plan="classic" />}
           />
         </Route>
+        <Route
+          path={`${PATHS.createCards.index}/:cardType`}
+          element={<CardDesignSelection />}
+        />
         <Route path={PATHS.aboutUs} element={<AboutUs />}></Route>
       </Routes>
     </BrowserRouter>

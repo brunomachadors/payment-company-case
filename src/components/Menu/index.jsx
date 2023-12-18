@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { CloseIcon, MenuIcon } from '../Image/styles';
+import { CloseIcon } from '../Image/styles';
 import {
   BarContainer,
   CloseButton,
@@ -14,20 +14,16 @@ import { closeMenu, openMenu } from '../../store/menu/menu';
 import { useNavigate } from 'react-router-dom';
 import { PATHS } from '../../utils/paths';
 import { useEffect, useState } from 'react';
-import images from '../../json/images.json';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 function Menu() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const open = useSelector((state) => state.menu.menu);
-  const [icons, setIcons] = useState({});
+
   const [bColor, setBColor] = useState('transparent');
 
   useEffect(() => {
-    const loadIcons = () => {
-      setIcons(images.icons);
-    };
-
     const background = () => {
       if (open) {
         setBColor('white');
@@ -36,7 +32,6 @@ function Menu() {
       }
     };
 
-    loadIcons();
     background();
   });
 
@@ -53,9 +48,7 @@ function Menu() {
     <MenuView id="menu">
       <MenuHeader id="menuHeader">
         <BarContainer id="menuContainer" style={{ backgroundColor: bColor }}>
-          {!open && (
-            <MenuIcon src={icons.menu} onClick={handleClose}></MenuIcon>
-          )}
+          {!open && <GiHamburgerMenu size={30} onClick={handleClose} />}
           {!open && (
             <KlarnaName onClick={() => handleNavigation(PATHS.home)}>
               Klarna.

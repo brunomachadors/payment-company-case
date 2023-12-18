@@ -36,3 +36,7 @@ export const MyCardDisplay = styled.img`
   width: 90%;
   border-radius: 10px;
 `;
+
+export const CardDisplay = styled.img`
+  height: 50vw;
+`;

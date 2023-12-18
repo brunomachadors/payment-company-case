@@ -8,6 +8,14 @@ root {
   justify-content: flex-start;
   flex-direction: column;
   color: black;
+  font-family: 'KlarnaTextRegular', sans-serif;
+}
+
+button {
+  color: #000;
+}
+select {
+  color: #000;
 }
 
 * {

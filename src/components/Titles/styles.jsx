@@ -27,3 +27,11 @@ export const CardTitle = styled.div`
   text-align: center;
   width: 95vw;
 `;
+
+export const RequestCardTitle = styled.p`
+  font-size: 3vh;
+  color: black;
+  width: 100%;
+  text-align: center;
+  font-family: 'KlarnaTextMedium', sans-serif;
+`;

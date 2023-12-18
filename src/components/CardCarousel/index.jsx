@@ -1,54 +1,66 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 import {
   CarouselContainer,
   CarouselInner,
   CarouselNavigation,
   CarouselItem,
-} from "./style";
-import { FaLongArrowAltRight, FaLongArrowAltLeft } from "react-icons/fa";
+  NavigaionContainer,
+} from './style';
+import { FaLongArrowAltRight, FaLongArrowAltLeft } from 'react-icons/fa';
+import cardPlan from '../../json/cardPlan.json';
+import PropTypes from 'prop-types';
+import { CardDisplay } from '../Image/styles';
 
 export default function CardCarousel({ cardType }) {
   const [currentItem, setCurrentItem] = useState(0);
-  //number 2 should be replaced by the length of items array when we have one. Same goes below in the component for conditionally rendering right arrow
+
   const handleChangeSlide = (direction) => {
-    if (direction === "right") {
-      currentItem === 2
-        ? setCurrentItem(2)
+    if (direction === 'right') {
+      currentItem === cardPlan[cardType].cards.length - 1
+        ? setCurrentItem(cardPlan[cardType].cards.length - 1)
         : setCurrentItem((prev) => prev + 1);
-    } else if (direction === "left") {
+    } else if (direction === 'left') {
       currentItem === 0
         ? setCurrentItem(0)
         : setCurrentItem((prev) => prev - 1);
     }
   };
+
   return (
     <CarouselContainer>
-      <CarouselNavigation
-        onClick={() => handleChangeSlide("left")}
-        direction="left"
-      >
-        {currentItem !== 0 && <FaLongArrowAltLeft />}
-      </CarouselNavigation>
-
       <CarouselInner currentItem={currentItem}>
-        <CarouselItem>
-          <h1>A</h1>
-        </CarouselItem>
-        <CarouselItem>
-          <h1>B</h1>
-        </CarouselItem>
-        <CarouselItem>
-          <h1>C</h1>
-        </CarouselItem>
-      </CarouselInner>
+        {cardPlan[cardType].cards.map((item) => {
+          console.log(item.imageSource);
 
-      <CarouselNavigation
-        onClick={() => handleChangeSlide("right")}
-        direction="right"
-      >
-        {currentItem !== 2 && <FaLongArrowAltRight />}
-      </CarouselNavigation>
+          return (
+            <CarouselItem key={`${item.name}-carousel`}>
+              <CardDisplay src={item.imageSource}></CardDisplay>
+            </CarouselItem>
+          );
+        })}
+      </CarouselInner>
+      <NavigaionContainer>
+        <CarouselNavigation
+          onClick={() => handleChangeSlide('left')}
+          direction="left"
+        >
+          {currentItem !== 0 && <FaLongArrowAltLeft />}
+        </CarouselNavigation>
+
+        <CarouselNavigation
+          onClick={() => handleChangeSlide('right')}
+          direction="right"
+        >
+          {currentItem !== cardPlan[cardType].cards.length - 1 && (
+            <FaLongArrowAltRight />
+          )}
+        </CarouselNavigation>
+      </NavigaionContainer>
     </CarouselContainer>
   );
 }
+
+CardCarousel.propTypes = {
+  cardType: PropTypes.string,
+};

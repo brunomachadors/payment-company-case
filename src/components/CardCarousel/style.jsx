@@ -1,18 +1,18 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const CarouselContainer = styled.figure`
-  width: 600px;
-  height: 800px;
+export const CarouselContainer = styled.div`
   margin: 2px;
   box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
+  gap: 20px;
+
   @media (max-width: 425px) {
     width: 320px;
-    height: 500px;
   }
 `;
 
@@ -23,36 +23,44 @@ export const CarouselInner = styled.div`
   gap: 0;
   z-index: 2;
   margin: 0;
-  width: 600px;
-  height: 800px;
+  height: 200px;
+
   @media (max-width: 425px) {
-    width: 320px;
+    width: 318px;
   }
 `;
 
 export const CarouselItem = styled.div`
-  width: 600px;
   color: red;
   font-size: 20px;
   flex: 0 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
   @media (max-width: 425px) {
     width: 320px;
   }
 `;
 
+export const NavigaionContainer = styled.div`
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+`;
+
 export const CarouselNavigation = styled.button`
   border: none;
   background: none;
-  font-size: 30px;
+  font-size: 50px;
   z-index: 3;
   &:active {
     filter: drop-shadow(0px 0px 2px gray);
     transform: scale(0.9);
   }
-  width: 35px;
-  position: absolute;
-  ${(props) => (props.direction === "left" ? "left: 2%" : "right: 2%")};
+
+  position: relative;
+  ${(props) => (props.direction === 'left' ? 'left: 2%' : 'right: 2%')};
 `;

@@ -31,8 +31,6 @@ export default function CardCarousel({ cardType }) {
     <CarouselContainer>
       <CarouselInner currentItem={currentItem}>
         {cardPlan[cardType].cards.map((item) => {
-          console.log(item.imageSource);
-
           return (
             <CarouselItem key={`${item.name}-carousel`}>
               <CardDisplay src={item.imageSource}></CardDisplay>

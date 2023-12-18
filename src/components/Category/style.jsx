@@ -8,11 +8,12 @@ export const CategoryType = styled.div`
   border-radius: 50px;
   color: #5f6163;
   font-family: 'KlarnaTextMedium', sans-serif;
-  font-size: 2.5vw;
+  font-size: 3vw;
 `;
 
 export const CategoryContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
+  gap: 10px;
 `;

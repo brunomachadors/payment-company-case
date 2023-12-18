@@ -38,7 +38,9 @@ function Content() {
         <ContentImage src={contentImages.cardKiss}></ContentImage>
       </ImageContainer>
       <ContentBlock>
-        <ContentTitle>Nosso cartão agora em Portugal</ContentTitle>
+        <ContentTitle>
+          O cartão de crédito Klarna chegou a Portugal
+        </ContentTitle>
         <ContentDescription>
           Agora você pode desfrutar da conveniência do serviço Klarna
           diretamente em suas lojas físicas e online favoritas.
@@ -53,11 +55,12 @@ function Content() {
           <KCash src={contentImages.kCash} />
         </ImageContainer>
         <ContentTitle>
-          Até 3% de <br /> cashback.
+          até 5% de <br /> cashback.
         </ContentTitle>
         <ContentDescription>
-          Receba 3% de cashback em todas as suas compras e desconte o valor em
-          mais compras.
+          Receba até 5% de cashback em todas as tuas compras e desconta os
+          valores em mais compras. Compra 100€ na tua loja favorita e recebe até
+          5€ para gastares no prazo de um ano.
         </ContentDescription>
         <ContentDescription>
           <BagsIcon src={contentIcons.bags} />

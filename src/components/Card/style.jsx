@@ -79,7 +79,7 @@ export const CardView = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   width: 100vw;
-  margin-top: 5vh;
+  margin-top: 1vh;
   gap: 2vh;
   padding: 24px;
   font-family: 'KlarnaTextMedium', sans-serif;
@@ -105,12 +105,12 @@ export const CardNumberInfoContainer = styled.div`
 `;
 export const CardNumberInfoTitle = styled.div`
   font-family: 'KlarnaTextRegular', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 export const CardNumberInfoValue = styled.div`
   font-family: 'KlarnaTextMedium', sans-serif;
-  font-size: 23px;
+  font-size: 20px;
 `;
 
 export const CardNameInfoContainer = styled.div`
@@ -124,18 +124,18 @@ export const CardNameInfoContainer = styled.div`
 
 export const CardNameInfoTitle = styled.div`
   font-family: 'KlarnaTextRegular', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 export const Tags = styled.div`
   font-family: 'KlarnaTextRegular', sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   width: 100%;
 `;
 
 export const CardNameInfoValue = styled.div`
   font-family: 'KlarnaTextMedium', sans-serif;
-  font-size: 23px;
+  font-size: 20px;
 `;
 
 export const CardExpireInfoContainer = styled.div`
@@ -158,12 +158,12 @@ export const CardExpireDateContaier = styled.div`
 
 export const CardExpireInfoTitle = styled.div`
   font-family: 'KlarnaTextRegular', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 export const CardExpireInfoValue = styled.div`
   font-family: 'KlarnaTextMedium', sans-serif;
-  font-size: 23px;
+  font-size: 20px;
 `;
 
 export const CardCVVInfoContainer = styled.div`
@@ -176,12 +176,12 @@ export const CardCVVInfoContainer = styled.div`
 `;
 export const CardCVVInfoTitle = styled.div`
   font-family: 'KlarnaTextRegular', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
 `;
 
 export const CardCVVInfoValue = styled.div`
   font-family: 'KlarnaTextMedium', sans-serif;
-  font-size: 23px;
+  font-size: 20px;
 `;
 
 export const ButtonsContainer = styled.div`

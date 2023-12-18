@@ -65,7 +65,7 @@ function Menu() {
       {open && (
         <MenuButtonsContainer>
           <MenuButton onClick={() => handleNavigation(PATHS.myCards)}>
-            <MenuButtonText>Meus cartões</MenuButtonText>
+            <MenuButtonText>Cartões</MenuButtonText>
           </MenuButton>
           <MenuButton onClick={() => handleNavigation(PATHS.createCards.index)}>
             <MenuButtonText>Solicitar cartão</MenuButtonText>

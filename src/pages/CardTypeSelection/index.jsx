@@ -8,6 +8,7 @@ import {
 } from './style';
 import { RequestCardTitle } from '../../components/Titles/styles';
 import { TabButton, TabButtonContainer } from '../../components/Button/styles';
+import { Recomended } from '../../components/CardPlan/style';
 
 export default function CardTypeSelection() {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ export default function CardTypeSelection() {
         Comece a desfrutar de uma nova forma de pagar suas contas na Klarna.
       </CardTypeDescription>
       <CardPlan>Escolha o plano adequado às suas necessidades</CardPlan>
+      <Recomended>Recomendado</Recomended>
       <CardPlansContainer>
         <TabButtonContainer>
           <TabButton

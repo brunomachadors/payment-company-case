@@ -37,7 +37,7 @@ export const ContentBlockLarge = styled.div`
 
 export const ContentTitle = styled.div`
   color: white;
-  font-size: 7vw;
+  font-size: 6vw;
   text-align: left;
   font-family: 'KlarnaTextMedium', sans-serif;
   white-space: pre-line;

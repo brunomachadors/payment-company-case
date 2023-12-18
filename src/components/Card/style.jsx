@@ -79,7 +79,7 @@ export const CardView = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   width: 100vw;
-  margin-top: 3vh;
+  margin-top: 1vh;
   gap: 2vh;
   padding: 24px;
   font-family: 'KlarnaTextMedium', sans-serif;

@@ -5,7 +5,7 @@ export const CardPageView = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-  margin-top: 3vh;
+  margin-top: 1vh;
   width: 100vw;
 `;
 

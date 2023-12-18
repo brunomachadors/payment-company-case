@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const CartTypeView = styled.div`
-  margin-top: 3vh;
+  margin-top: 1vh;
   padding: 24px;
   gap: 10px;
   display: flex;
